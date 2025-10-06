@@ -1,6 +1,9 @@
 # Supplements-Store
 
-An online supplement store.
+# Steps
+
+1. Pull repo to whatever directory you want/
+2. do `mklink /D C:\xampp\htdocs\suplement-store C:\Users\you\Projects\Suplement-Store`
 
 # Repo Layout
 
