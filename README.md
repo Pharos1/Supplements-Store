@@ -18,7 +18,7 @@ supplements-store/
 │   │   └── images/
 │   └── uploads/        # User-uploaded images (product pics, etc.)
 │
-├── src/# Source code (backend logic)
+├── src/                # Source code (backend logic)
 │   ├── controllers/    # Handle requests (e.g. ProductController.php)
 │   ├── models/         # Database models (Product.php, User.php)
 │   ├── views/          # Reusable HTML/PHP templates
