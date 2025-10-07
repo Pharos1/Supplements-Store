@@ -17,6 +17,8 @@ supplements-store/
 │   │   ├── js/
 │   │   └── images/
 │   └── uploads/        # User-uploaded images (product pics, etc.)
+|   └── includes/       # Header, Footer, Navbar etc.
+|   └── pages/          # Actual content of pages.
 │
 ├── src/                # Source code (backend logic)
 │   ├── controllers/    # Handle requests (e.g. ProductController.php)
