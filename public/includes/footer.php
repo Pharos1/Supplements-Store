@@ -1,4 +1,5 @@
-<footer class="bg-dark text-white text-center py-3 mt-auto fixed-bottom">
+</main>
+<footer class="bg-dark text-white text-center py-3 mt-auto">
     <p>&copy; 2025 Supplements Store</p>
 </footer>
 
