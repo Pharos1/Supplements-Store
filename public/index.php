@@ -1,4 +1,4 @@
 <?php
     $content = 'pages/home.php';
-    include 'layout.php';
+    require_once 'layout.php';
 ?>

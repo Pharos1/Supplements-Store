@@ -1,4 +1,4 @@
-<?php include '../src/config.php'; ?>
+<?php require_once __DIR__ . '/../src/controllers/ProductController.php'?>
 
 <form method="POST" action="add_product.php" enctype="multipart/form-data">
     <input type="text" name="name" placeholder="Product name" required><br>
