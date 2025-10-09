@@ -1,4 +1,4 @@
 <?php
     $content = 'pages/cart.php';
-    include 'layout.php';
+    require_once 'layout.php';
 ?>

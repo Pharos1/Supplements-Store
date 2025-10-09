@@ -1,4 +1,4 @@
 <?php
     $content = 'pages/contact.php';
-    include 'layout.php';
+    require_once 'layout.php';
 ?>

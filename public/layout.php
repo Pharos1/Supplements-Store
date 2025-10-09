@@ -1,6 +1,6 @@
 <?php
-    include 'includes/header.php';
-    include 'includes/navbar.php';
-    include $content;
-    include 'includes/footer.php';
+    require_once 'includes/header.php';
+    require_once 'includes/navbar.php';
+    require_once $content;
+    require_once 'includes/footer.php';
 ?>

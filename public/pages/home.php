@@ -1,8 +1,11 @@
-<?php include '../src/config.php'; ?>
+<?php require_once __DIR__ . '/../../src/controllers/ProductController.php';?>
+
 <div class="container my-4">
     <div class="row">
         <?php 
-            $result = $conn->query("SELECT * FROM products");
+            $controller = new ProductController();
+            $result = $controller->listProducts();
+            
             while ($row = $result->fetch_assoc()):
         ?>
         <div class="col-md-3 mt-4">

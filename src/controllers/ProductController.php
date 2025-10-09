@@ -12,8 +12,8 @@ class ProductController {
         return $this->productModel->getAll();
     }
 
-    public function addProduct($name, $description, $price, $image) {
-        return $this->productModel->create($name, $description, $price, $image);
+    public function addProduct($name, $price, $image) {
+        return $this->productModel->create($name, $price, $image);
     }
 }
 
