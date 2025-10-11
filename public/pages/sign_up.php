@@ -11,6 +11,11 @@
 			<label class="form-label" for="password">Password</label>
 			<input type="password" id="password" class="form-control" placeholder="Enter password" />
 		</div>
+		<!-- Confirm Password -->
+		<div data-mdb-input-init class="form-outline mb-4">
+			<label class="form-label" for="password">Confirm Password</label>
+			<input type="password" id="password" class="form-control" placeholder="Confirm password" />
+		</div>
 
 		<!-- 2 column grid layout for inline styling -->
 		<div class="row mb-4">
@@ -21,20 +26,16 @@
 					<label class="form-check-label" for="remember_me"> Remember me </label>
 				</div>
 			</div>
-			<div class="col">
-				<!-- Simple link -->
-				<a href="#!">Forgot password?</a>
-			</div>
 		</div>
 
 		<!-- Submit button -->
 		<div class="text-center">
-			<button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign in</button>
+			<button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Sign up</button>
 		</div>
 		<!-- Register buttons -->
 		<div class="text-center">
-			<p>Not a member? <a href="sign_up.php">Register</a></p>
-			<p>or sign up with:</p>
+			<p>Already a member? <a href="sign_in.php">Log in</a></p>
+			<p>Other sign up methods:</p>
 			<button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
 				<i class="fab fa-facebook-f"></i>
 			</button>
