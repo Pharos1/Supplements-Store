@@ -1,0 +1,72 @@
+:root {
+    --primary-accent: #ff4500; /* Energetic Orange */
+    --dark-bg: #111111;
+    --card-bg: #ffffff;
+}
+
+body {
+    background-color: #f4f6f8; /* Soft gray background so white cards pop */
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Custom Navbar */
+.navbar {
+    background-color: var(--dark-bg) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    color: var(--primary-accent) !important;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.nav-link {
+    color: #f8f9fa !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: var(--primary-accent) !important;
+}
+
+/* Custom Buttons */
+.btn-custom {
+    background-color: var(--primary-accent);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+.btn-custom:hover {
+    background-color: #d13800; /* Darker orange */
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Custom Product Cards */
+.card-custom {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--card-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.card-custom:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.15); /* Orange tinted shadow */
+}
+.price-tag {
+    color: var(--dark-bg);
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: #aaaaaa;
+}
