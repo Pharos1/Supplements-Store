@@ -1,5 +1,0 @@
-.crop-img {
-    height: 200px; /* Fixed height for all images */
-    object-fit: cover; /* Crops top/bottom or sides */
-    object-position: center; /* Crop focus point */
-}
