@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jun 04, 2026 at 09:05 PM
+-- Generation Time: Jun 04, 2026 at 09:17 PM
 -- Server version: 8.0.46
 -- PHP Version: 8.3.26
 
@@ -63,12 +63,12 @@ CREATE TABLE `order_items` (
 --
 
 INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `price_at_purchase`) VALUES
-(1, 101, 1, 1, 49.99),
-(2, 101, 2, 2, 24.99),
-(3, 102, 1, 1, 49.99),
-(4, 103, 1, 2, 49.99),
-(5, 103, 4, 1, 34.99),
-(6, 104, 2, 1, 24.99);
+(7, 101, 1, 1, 49.99),
+(8, 101, 2, 2, 24.99),
+(9, 102, 1, 1, 49.99),
+(10, 103, 1, 2, 49.99),
+(11, 103, 4, 1, 34.99),
+(12, 104, 2, 1, 24.99);
 
 -- --------------------------------------------------------
 
@@ -91,10 +91,11 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `category`) VALUES
 (1, 'Ultra Whey Isolate', 'Pure premium whey protein isolate.', 49.99, 'uploads/1778158793_whey_isolate.png', 'protein'),
-(2, 'Micronized Creatine', 'Max strength muscle cell volumizer.', 24.99, 'uploads/1778158820_creatine.png', 'creatine'),
-(3, 'Goreshta-Kruf', 'Hot-Blood for Cold-Blooded athletes.', 29.99, 'uploads/1780595814_pre1.png', 'preworkout'),
+(2, 'MK-6767', 'For people who hate their lifespan so much.', 67.99, 'uploads/1780607365_1780595675_Ibutamoren-1-front-2-2430155138.png', 'protein'),
+(3, 'Anabolic Mix', 'The perfect mix for a cycle or two. After all one cycle doesn\'t hurt, they say, don\'t they?', 67.99, 'uploads/1780606846_ampule.jpg', 'anabol'),
 (4, 'Explosive Pre-Workout', 'High caffeine laser focus formula.', 34.99, 'uploads/1778158844_pre.png', 'preworkout'),
-(5, 'Anabolic Mix', 'The perfect mix for a cycle or two. After all one cycle doesn\'t hurt, they say, don\'t they?', 67.99, 'uploads/1780606846_ampule.jpg', 'anabol');
+(5, 'Goreshta-Kruf', 'Hot-Blood for Cold-Blooded athletes.', 29.99, 'uploads/1780595814_pre1.png', 'preworkout'),
+(6, 'Micronized Creatine', 'Max strength muscle cell volumizer.', 24.99, 'uploads/1778158820_creatine.png', 'creatine');
 
 -- --------------------------------------------------------
 
@@ -120,7 +121,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `is_admin`
 (2, 'John Doe', 'john@gmail.com', '', '2026-06-04 19:49:35', 0),
 (3, 'Alex Mercer', 'alex.m@yahoo.com', '', '2026-06-04 19:49:35', 0),
 (4, 'Sarah Connor', 'sconnor@fit.com', '', '2026-06-04 19:49:35', 0),
-(5, 'pepi', 'petrov@gmail.com', '$2y$10$bHcYLyf0dXwsgd9TsYzVCe3g5vQjWQ1Ub.NJFd/KQKBnFmGbCKYyG', '2026-06-04 20:21:33', 0);
+(5, 'pepi', 'petrov@gmail.com', '$2y$10$bHcYLyf0dXwsgd9TsYzVCe3g5vQjWQ1Ub.NJFd/KQKBnFmGbCKYyG', '2026-06-04 20:21:33', 0),
+(10, 'dd', 'dd@gmail.com', '$2y$10$KObnNpmpeK1oVCT.Y60oyuzJllc8Bk.52kc1LezYzPnjmVRu1l9Ru', '2026-06-04 21:06:56', 0);
 
 --
 -- Indexes for dumped tables
@@ -167,19 +169,19 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
