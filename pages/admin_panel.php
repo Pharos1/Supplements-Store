@@ -9,7 +9,7 @@
                         <input type="text" name="name" class="form-control" placeholder="e.g. Omega 3 Fish Oil" required>
                     </div>
                     <div class="col-md-6 mb-3">
-                        <label class="form-label fw-bold">Price ($)</label>
+                        <label class="form-label fw-bold">Price (&euro;)</label>
                         <input type="number" step="0.01" name="price" class="form-control" placeholder="29.99" required>
                     </div>
                 </div>
