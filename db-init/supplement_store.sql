@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jun 04, 2026 at 07:49 PM
+-- Generation Time: Jun 04, 2026 at 09:05 PM
 -- Server version: 8.0.46
 -- PHP Version: 8.3.26
 
@@ -78,11 +78,11 @@ INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `price_at
 
 CREATE TABLE `products` (
   `id` int NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` text COLLATE utf8mb4_general_ci,
+  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `price` decimal(10,2) NOT NULL,
-  `image` varchar(555) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `category` varchar(50) COLLATE utf8mb4_general_ci DEFAULT 'protein'
+  `image` varchar(555) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `category` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT 'protein'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -90,10 +90,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `category`) VALUES
-(1, 'Ultra Whey Isolate', 'Pure premium whey protein isolate.', 49.99, 'uploads/1778158793_whey_isolate.jpg', 'protein'),
-(2, 'Micronized Creatine', 'Max strength muscle cell volumizer.', 24.99, 'uploads/1778158820_creatine.jpg', 'creatine'),
-(3, 'BCAA Energy Matrix', 'Intra-workout hydration and repair.', 29.99, 'uploads/1778158299_grafic.jpeg', 'bcaa'),
-(4, 'Explosive Pre-Workout', 'High caffeine laser focus formula.', 34.99, 'uploads/1778158844_pre.jpg', 'preworkout');
+(1, 'Ultra Whey Isolate', 'Pure premium whey protein isolate.', 49.99, 'uploads/1778158793_whey_isolate.png', 'protein'),
+(2, 'Micronized Creatine', 'Max strength muscle cell volumizer.', 24.99, 'uploads/1778158820_creatine.png', 'creatine'),
+(3, 'Goreshta-Kruf', 'Hot-Blood for Cold-Blooded athletes.', 29.99, 'uploads/1780595814_pre1.png', 'preworkout'),
+(4, 'Explosive Pre-Workout', 'High caffeine laser focus formula.', 34.99, 'uploads/1778158844_pre.png', 'preworkout'),
+(5, 'Anabolic Mix', 'The perfect mix for a cycle or two. After all one cycle doesn\'t hurt, they say, don\'t they?', 67.99, 'uploads/1780606846_ampule.jpg', 'anabol');
 
 -- --------------------------------------------------------
 
@@ -103,9 +104,9 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `category
 
 CREATE TABLE `users` (
   `id` int NOT NULL,
-  `name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_admin` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -115,10 +116,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `is_admin`) VALUES
-(1, 'Admin Supps', 'admin@supps.com', '', '2026-06-04 19:49:35', 1),
+(1, 'Admin Supps', 'admin@supps.com', '$2y$10$Sd9JvdZ/RMirwHskHMhX2OO.SfB4KPPAf/nCvmTLtT3Si2Df0J4Py', '2026-06-04 19:49:35', 1),
 (2, 'John Doe', 'john@gmail.com', '', '2026-06-04 19:49:35', 0),
 (3, 'Alex Mercer', 'alex.m@yahoo.com', '', '2026-06-04 19:49:35', 0),
-(4, 'Sarah Connor', 'sconnor@fit.com', '', '2026-06-04 19:49:35', 0);
+(4, 'Sarah Connor', 'sconnor@fit.com', '', '2026-06-04 19:49:35', 0),
+(5, 'pepi', 'petrov@gmail.com', '$2y$10$bHcYLyf0dXwsgd9TsYzVCe3g5vQjWQ1Ub.NJFd/KQKBnFmGbCKYyG', '2026-06-04 20:21:33', 0);
 
 --
 -- Indexes for dumped tables
@@ -171,13 +173,13 @@ ALTER TABLE `order_items`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
