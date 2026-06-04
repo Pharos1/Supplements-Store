@@ -70,3 +70,58 @@ footer {
     background-color: var(--dark-bg);
     color: #aaaaaa;
 }
+
+/* Container holding the categories */
+.category-scroll-container {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    padding: 8px 16px;
+    justify-content: center; /* Centers elements when they fit */
+    
+    /* Smooth native momentum scrolling for iOS/Android mobile browsers */
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* Fallback adjustment: when buttons overflow, flexbox alignment rules 
+   can break scrolling bounds, so we shift alignment to start */
+@media (max-width: 768px) {
+    .category-scroll-container {
+        justify-content: flex-start;
+    }
+}
+
+/* Hide scrollbar tracks across major browser engines for peak minimalism */
+.category-scroll-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+.category-scroll-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Minimalist Category Buttons UI modifications */
+.btn-category {
+    background: transparent;
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+}
+
+.btn-category:hover {
+    color: #212529;
+    border-color: #212529;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn-category.active {
+    background-color: #212529 !important;
+    color: #ffffff !important;
+    border-color: #212529 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

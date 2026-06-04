@@ -3,23 +3,12 @@
     <p class="text-muted">Premium supplements for serious athletes.</p>
 </div>
 
-<div class="row g-3 mb-5 align-items-center">
-    <div class="col-md-4">
-        <input type="text" id="productSearch" class="form-control text-dark" placeholder="Search supplements (e.g., Whey, Pre-workout)...">
+<div class="row g-3 mb-4 justify-content-between align-items-center">
+    <div class="col-sm-6 col-md-4">
+        <input type="text" id="productSearch" class="form-control text-dark px-3 rounded-pill" placeholder="Search supplements...">
     </div>
-    
-    <div class="col-md-5">
-        <div class="btn-group w-100" role="group" aria-label="Category Filters">
-            <button type="button" class="btn btn-outline-dark filter-btn active" data-category="all">All</button>
-            <button type="button" class="btn btn-outline-dark filter-btn" data-category="protein">Protein</button>
-            <button type="button" class="btn btn-outline-dark filter-btn" data-category="creatine">Creatine</button>
-            <button type="button" class="btn btn-outline-dark filter-btn" data-category="bcaa">BCAA</button>
-            <button type="button" class="btn btn-outline-dark filter-btn" data-category="pre">Pre-Workout</button>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <select id="productSort" class="form-select text-dark">
+    <div class="col-sm-6 col-md-3">
+        <select id="productSort" class="form-select text-dark rounded-pill">
             <option value="default">Sort By: Featured</option>
             <option value="price_low_high">Price: Low to High</option>
             <option value="price_high_low">Price: High to Low</option>
@@ -28,15 +17,27 @@
     </div>
 </div>
 
+<div class="d-flex justify-content-center mb-5">
+    <div class="category-scroll-container">
+        <button type="button" class="btn btn-category active" data-category="all">All Products</button>
+        <button type="button" class="btn btn-category" data-category="protein">Protein</button>
+        <button type="button" class="btn btn-category" data-category="creatine">Creatine</button>
+        <button type="button" class="btn btn-category" data-category="bcaa">BCAAs</button>
+        <button type="button" class="btn btn-category" data-category="preworkout">Pre-Workout</button>
+        <button type="button" class="btn btn-category" data-category="vitamins">Vitamins</button>
+        <button type="button" class="btn btn-category" data-category="anabol">Legal Testo-boosters</button>
+    </div>
+</div>
+
 <div class="row g-4" id="productsContainer">
     </div>
-
+     
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const productsContainer = document.getElementById("productsContainer");
     const searchInput = document.getElementById("productSearch");
     const sortSelect = document.getElementById("productSort");
-    const filterButtons = document.querySelectorAll(".filter-btn");
+    const filterButtons = document.querySelectorAll(".btn-category");
 
     let currentCategory = "all";
 
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="card card-custom h-100">
                         <img src="${imgSrc}"
                             class="card-img-top"
-                            style="height: 250px; object-fit: cover;"
+                            style="height: 250px; object-fit: contain;"
                             alt="${escapeName}">
                         <div class="card-body d-flex flex-column p-4">
                             <h5 class="card-title fw-bold mb-3">${escapeName}</h5>

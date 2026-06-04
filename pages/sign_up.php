@@ -4,8 +4,8 @@
             <h2 class="fw-bold mb-4 text-center">Create an Account</h2>
             <form action="actions/register.php" method="POST">
                 <div class="mb-3">
-                    <label class="form-label text-muted fw-bold">Username</label>
-                    <input type="text" name="username" class="form-control" required>
+                    <label class="form-label text-muted fw-bold">Name</label>
+                    <input type="text" name="name" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label text-muted fw-bold">Email address</label>

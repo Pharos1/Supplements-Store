@@ -17,9 +17,13 @@ $cart_count = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
                         Cart <span class="badge bg-danger"><?= $cart_count ?></span>
                     </a>
                 </li>
-                <?php if (isset($_SESSION['user_id'])): ?>
-                    <li class="nav-item"><a class="nav-link text-warning" href="admin_route.php">Admin Panel</a></li>
-                    <li class="nav-item ms-lg-3"><span class="nav-link text-white">Hi, <?= htmlspecialchars($_SESSION['username']) ?></span></li>
+                <?php if (isset($_SESSION['user']) && isset($_SESSION['user']['is_admin']) && $_SESSION['user']['is_admin'] == true): ?>
+                     <li class="nav-item">
+                          <a class="btn btn-danger btn-sm text-white px-3 mx-2 fw-bold" href="admin_route.php">Admin Panel</a>
+                     </li>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <li class="nav-item ms-lg-3"><span class="nav-link text-white">Hi, <?= htmlspecialchars($_SESSION['user']['name']) ?></span></li>
                     <li class="nav-item"><a class="btn btn-outline-light btn-sm ms-2" href="actions/logout.php">Logout</a></li>
                 <?php else: ?>
                     <li class="nav-item ms-lg-3"><a class="nav-link" href="login_route.php">Sign In</a></li>

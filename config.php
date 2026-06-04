@@ -1,5 +1,8 @@
 <?php
-session_start();
+// Only start a session if one isn't already running globally
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $host = 'db';
 $db   = 'supplement_store';

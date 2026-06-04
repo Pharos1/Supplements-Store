@@ -6,14 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $price = $_POST['price'];
     $description = $_POST['description'];
 
-    // 1. Handle File Upload
-    $target_dir = "../uploads/";
-    // Use time() to make the filename unique so files don't overwrite each other
-    $file_name = time() . "_" . basename($_FILES["product_image"]["name"]);
-    $target_file = $target_dir . $file_name;
+    $target_dir = __DIR__ . '/../uploads/';
+    $filename = time() . '_' . basename($_FILES["product_image"]["name"]);
+    $target_file = $target_dir . $filename;
 
     // Path to save in the database (starting from the root)
-    $db_path = "uploads/" . $file_name;
+    $db_path = "uploads/" . $filename;
 
     if (move_uploaded_file($_FILES["product_image"]["tmp_name"], $target_file)) {
         // 2. Save to Database

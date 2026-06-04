@@ -1,8 +1,8 @@
 <?php
-require '../config.php';
+require "../config.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = trim($_POST['username']);
+    $name = trim($_POST['name']);
     $email = trim($_POST['email']);
     $password = $_POST['password'];
 
@@ -10,12 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // 2. Prepare the SQL statement (prevents SQL injection)
-    $stmt = $pdo->prepare("INSERT INTO users (username, email, password) VALUES (:username, :email, :password)");
+    $stmt = $pdo->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
 
     // 3. Execute with data
     try {
         $stmt->execute([
-            ':username' => $username,
+            ':name' => $name,
             ':email' => $email,
             ':password' => $hashed_password
         ]);
