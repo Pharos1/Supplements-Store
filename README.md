@@ -2,8 +2,16 @@
 
 # Steps
 
-1. Pull repo to whatever directory you want/
-2. do `mklink /D C:\xampp\htdocs\suplement-store C:\Users\you\Projects\Suplement-Store`
+
+## For linux
+1. clone repo
+2. install docker
+3. go in folder
+4. run docker compose up -d
+5. if error: do docker compose down -v and step 3 two. Repeat until the end.
+
+## For windows
+1. same, but install docker desktop
 
 # Repo Layout
 
