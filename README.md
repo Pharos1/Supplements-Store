@@ -9,25 +9,44 @@
 
 <pre style="white-space: pre; overflow-x: auto;">
 supplements-store/
-│
-├── public/             # Public-facing files (served by Apache)
-│   ├── index.php       # Entry point (router or homepage)
-│   ├── assets/
-│   │   ├── css/
-│   │   ├── js/
-│   │   └── images/
-│   └── uploads/        # User-uploaded images (product pics, etc.)
-|   └── includes/       # Header, Footer, Navbar etc.
-|   └── pages/          # Actual content of pages.
-│
-├── src/                # Source code (backend logic)
-│   ├── controllers/    # Handle requests (e.g. ProductController.php)
-│   ├── models/         # Database models (Product.php, User.php)
-│   ├── views/          # Reusable HTML/PHP templates
-│   ├── database/       # Database connection, migrations, seed data
-│   ├── helpers/        # Utility functions
-│   └── config.php      # Database credentials, constants, etc.
-├── .gitignore          # Ignore cache files, uploads, etc.
-├── composer.json       # For managing PHP packages (optional but pro)
-└── README.md           # Project info, setup instructions
+├── Dockerfile
+├── LICENSE
+├── README.md
+├── about_route.php
+├── actions
+│   ├── add_product.php
+│   ├── cart_action.php
+│   ├── delete_user.php
+│   ├── login_action.php
+│   ├── logout.php
+│   └── register.php
+├── admin_route.php
+├── api
+│   ├── get_products.php
+│   └── get_users.php
+├── cart_route.php
+├── config.php
+├── css
+│   └── style.css
+├── db-init
+│   └── supplement_store.sql
+├── docker-compose.yml
+├── img
+│   └── user.png
+├── includes
+│   ├── footer.php
+│   └── navbar.php
+├── index.php
+├── layout.php
+├── login_route.php
+├── pages
+│   ├── about.php
+│   ├── admin_panel.php
+│   ├── cart.php
+│   ├── home.php
+│   ├── login.php
+│   └── sign_up.php
+├── signup_route.php
+├── todo.md
+└── uploads
 </pre>
