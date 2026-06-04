@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$host = 'localhost';
+$host = 'db';
 $db   = 'supplement_store';
 $user = 'root'; // Default XAMPP user
-$pass = '';     // Default XAMPP password
+$pass = 'root';     // Default XAMPP password
 
 try {
     // We use PDO because it's secure against SQL injection and easy to use
