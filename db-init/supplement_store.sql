@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Jun 04, 2026 at 09:17 PM
+-- Generation Time: Jun 04, 2026 at 09:20 PM
 -- Server version: 8.0.46
 -- PHP Version: 8.3.26
 
@@ -91,7 +91,7 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `category`) VALUES
 (1, 'Ultra Whey Isolate', 'Pure premium whey protein isolate.', 49.99, 'uploads/1778158793_whey_isolate.png', 'protein'),
-(2, 'MK-6767', 'For people who hate their lifespan so much.', 67.99, 'uploads/1780607365_1780595675_Ibutamoren-1-front-2-2430155138.png', 'protein'),
+(2, 'MK-6767', 'For people who hate their lifespan so much.', 67.99, 'uploads/1780607365_1780595675_Ibutamoren-1-front-2-2430155138.png', 'anabol'),
 (3, 'Anabolic Mix', 'The perfect mix for a cycle or two. After all one cycle doesn\'t hurt, they say, don\'t they?', 67.99, 'uploads/1780606846_ampule.jpg', 'anabol'),
 (4, 'Explosive Pre-Workout', 'High caffeine laser focus formula.', 34.99, 'uploads/1778158844_pre.png', 'preworkout'),
 (5, 'Goreshta-Kruf', 'Hot-Blood for Cold-Blooded athletes.', 29.99, 'uploads/1780595814_pre1.png', 'preworkout'),
